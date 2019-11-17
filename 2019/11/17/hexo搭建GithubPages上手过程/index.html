@@ -39,7 +39,7 @@
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     },
-    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":5,"unescape":false,"preload":false},
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
     path: 'search.xml',
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     sidebarPadding: 40
@@ -55,7 +55,7 @@
 <meta property="og:description" content="目录为什么使用hexo如何使用hexo搭建Github Pageshexo的一些命令插件碰到的问题  为什么使用hexo hexo基于node.js，渲染速度比jekyll快很多（虽然对这种小博客没什么影响但就感觉很牛逼）。 jekyll是把文章推到github上，在GitHub上渲染生成html（大概是这样？)，hexo是在本地渲染成html然后再把博客中需要的文件推到github上，我是觉得文">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;1.png">
-<meta property="og:updated_time" content="2019-11-17T10:39:27.788Z">
+<meta property="og:updated_time" content="2019-11-17T10:54:49.455Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;1.png">
 
@@ -232,7 +232,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2019-11-17 18:11:28 / 修改时间：18:39:27" itemprop="dateCreated datePublished" datetime="2019-11-17T18:11:28+08:00">2019-11-17</time>
+              <time title="创建时间：2019-11-17 18:11:28 / 修改时间：18:54:49" itemprop="dateCreated datePublished" datetime="2019-11-17T18:11:28+08:00">2019-11-17</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -278,7 +278,7 @@
 </ul>
 <h1 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h1><ol>
 <li><strong>hexo-browsersync</strong><br>运行命令<code>hexo server --draft</code>后使用该插件可以实现一边在本地编辑文章，一边看文章的显示效果。</li>
-<li><strong>hexo-asset-image</strong><br>先把主页配置文件<code>_config.yml</code>里的<code>post_asset_folder</code>这个选项设置为<code>true</code>，然后在<code>hexo</code>目录下执行<code>npm install hexo-asset-image --save</code>安装该插件。<br>配置完以后在创建文章的时候都会新建一个同名文件夹，然后将要插入文章的图片放在该文件夹中，文章中使用图片的相对路径<code>![title](title/1.jpg)</code></li>
+<li><strong>hexo-asset-image</strong><br>先把主页配置文件<code>_config.yml</code>里的<code>post_asset_folder</code>这个选项设置为<code>true</code>，然后在<code>hexo</code>目录下执行<code>npm install hexo-asset-image --save</code>安装该插件。<br>配置完以后在创建文章的时候都会新建一个同名文件夹，然后将要插入文章的图片放在该文件夹中，文章中使用图片的相对路径<code>![title](1.jpg)</code></li>
 <li><strong>hexo-generator-searchdb</strong><br>执行<code>npm install hexo-generator-searchdb --save</code>安装插件，然后在hexo目录下的_config.yml中添加如下配置。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  limit: 10000</span><br></pre></td></tr></table></figure>
 在主题下的配置文件中开启本地搜索。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># Local search</span><br><span class="line">local_search:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure>
 重新部署hexo。</li>

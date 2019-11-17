@@ -24,7 +24,7 @@
 </ul>
 <h1 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h1><ol>
 <li><strong>hexo-browsersync</strong><br>运行命令<code>hexo server --draft</code>后使用该插件可以实现一边在本地编辑文章，一边看文章的显示效果。</li>
-<li><strong>hexo-asset-image</strong><br>先把主页配置文件<code>_config.yml</code>里的<code>post_asset_folder</code>这个选项设置为<code>true</code>，然后在<code>hexo</code>目录下执行<code>npm install hexo-asset-image --save</code>安装该插件。<br>配置完以后在创建文章的时候都会新建一个同名文件夹，然后将要插入文章的图片放在该文件夹中，文章中使用图片的相对路径<code>![title](title/1.jpg)</code></li>
+<li><strong>hexo-asset-image</strong><br>先把主页配置文件<code>_config.yml</code>里的<code>post_asset_folder</code>这个选项设置为<code>true</code>，然后在<code>hexo</code>目录下执行<code>npm install hexo-asset-image --save</code>安装该插件。<br>配置完以后在创建文章的时候都会新建一个同名文件夹，然后将要插入文章的图片放在该文件夹中，文章中使用图片的相对路径<code>![title](1.jpg)</code></li>
 <li><strong>hexo-generator-searchdb</strong><br>执行<code>npm install hexo-generator-searchdb --save</code>安装插件，然后在hexo目录下的_config.yml中添加如下配置。<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  limit: 10000</span><br></pre></td></tr></table></figure>
 在主题下的配置文件中开启本地搜索。<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Local search</span><br><span class="line">local_search:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure>
 重新部署hexo。</li>
