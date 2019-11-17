@@ -30,7 +30,7 @@
 重新部署hexo。</li>
 </ol>
 <h1 id="碰到的问题"><a href="#碰到的问题" class="headerlink" title="碰到的问题"></a>碰到的问题</h1><ol>
-<li>使用<code>npm install hexo-asset-image --save</code>下载hexo-asset-image的时候npm报了几个安全隐患，应该是插件依赖的一个库版本太低了，可以忽略。<br><img src="1.PNG" alt="error"></li>
+<li>使用<code>npm install hexo-asset-image --save</code>下载hexo-asset-image的时候npm报了几个安全隐患，应该是插件依赖的一个库版本太低了，可以忽略。<br><img src="1.png" alt="error"></li>
 </ol>
 ]]></content>
       <categories>
