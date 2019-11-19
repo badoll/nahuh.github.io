@@ -103,9 +103,20 @@
   <entry>
     <title>Markdown的一些使用技巧</title>
     <url>/2019/11/17/Markdown%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</url>
-    <content><![CDATA[<h1 id="锚点"><a href="#锚点" class="headerlink" title="锚点"></a>锚点</h1><p>在一些markdown工具（typora）中可以在开头直接使用<code>[toc]</code>生成目录，但在github或者hexo上是不行的，需要使用以下的语法创建目录。</p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">- </span>[<span class="string">title 1</span>](<span class="link">#title-1</span>)</span><br><span class="line"><span class="bullet">  - </span>[<span class="string">title 2</span>](<span class="link">#title-2</span>)</span><br><span class="line"><span class="bullet">    - </span>[<span class="string">title 3</span>](<span class="link">#title-3</span>)</span><br></pre></td></tr></table></figure><p>显示效果如下</p><a id="more"></a>
+    <content><![CDATA[<hr><blockquote>
+<p>更新于 2019.11.19</p>
+</blockquote><p>由于今天写markdown发现排版有点问题，特此记录一下。</p><ul>
+<li>markdown的换行需要在行的结尾多打两个空格，或者在行与行之间多加一行空格。<br>注意，在两个不同的有序列表之间，不能用行尾俩个空格代表分隔两个列表，必须要多出一行空行，不然下面的列表的数字会接着上面那个列表。</li>
+<li>在有序列表中加入代码块时，需要在代码每一行加一个TAB，不然会被当成列表外的代码块，会将列表分隔开。</li>
+<li>一些特殊符号例如<code>~</code>等，如果直接打出来不加转义符号<code>\\</code>的话，那一句话会被画上删除线。<br>另外，在一些markdown编辑器下，一些错误的语法可能不会被发现，我在typora上写完排版是没问题的，放在其他地方就会出问题，可以使用网上的一些编辑器测试一下自己的markdown显示有没有问题，Chrome上也有这种markdown编辑器的插件，可以下来试一试。</li>
+</ul><a id="more"></a>
 
 
+
+<hr>
+<h1 id="锚点"><a href="#锚点" class="headerlink" title="锚点"></a>锚点</h1><p>在一些markdown工具（typora）中可以在开头直接使用<code>[toc]</code>生成目录，但在github或者hexo上是不行的，需要使用以下的语法创建目录。</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">- </span>[<span class="string">title 1</span>](<span class="link">#title-1</span>)</span><br><span class="line"><span class="bullet">  - </span>[<span class="string">title 2</span>](<span class="link">#title-2</span>)</span><br><span class="line"><span class="bullet">    - </span>[<span class="string">title 3</span>](<span class="link">#title-3</span>)</span><br></pre></td></tr></table></figure>
+<p>显示效果如下</p>
 <ul>
 <li><a href="#title-1">title 1</a><ul>
 <li><a href="#title-2">title 2</a><ul>
@@ -119,7 +130,7 @@
 <p>嵌套列表有以下两种实现方式。</p>
 <ol>
 <li>列表前插入四个空格（一个TAB），这样的方式比较简单，每次按一次TAB键就可以。</li>
-<li>列表前插入对齐的空格数，不固定每次嵌套所需的空格数量，比如每个嵌套都插入两个空格，只要列表对齐就行。<br>在typora上写markdown可以使用非strict模式，可以不用那么规范，好像会自动调整空格数。</li>
+<li>列表前插入对齐的空格数，不固定每次嵌套所需的空格数量，比如每个嵌套都插入两个空格，只要列表对齐就行。</li>
 </ol>
 <p>另外，如果不想每次自己手动写目录的话，有现成的工具可以使用。</p>
 <ol>
