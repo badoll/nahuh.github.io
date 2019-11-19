@@ -1,6 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>MAC和LINUX下环境变量的相关文件和配置</title>
+    <url>/2019/11/19/MAC%E5%92%8CLINUX%E4%B8%8B%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E7%9A%84%E7%9B%B8%E5%85%B3%E6%96%87%E4%BB%B6%E5%92%8C%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<blockquote>
+<p>之前一直没怎么搞清楚环境变量的文件的配置，现在整理了一下网上查阅到的资料和自己的理解。  </p>
+</blockquote><h1 id="环境变量的配置文件"><a href="#环境变量的配置文件" class="headerlink" title="环境变量的配置文件"></a>环境变量的配置文件</h1><p>先说一下这几个配置环境变量的文件吧，读取的顺序依次是：<br>/etc/profile<br>/etc/paths<br>~/.bash_profile<br>~/.bash_login<br>~/.profile<br>~/.bashrc<br>/etc/profile和/etc/paths是系统级别的，系统启动就会加载，后面几个是当前用户级的环境变量，按照从前往后的顺序读取。<br>如果~/.bash_profile文件存在，则后面的几个文件就会被忽略不读了，如果/.bash_profile文件不存在，才会以此类推读取后面的文件。~/.bashrc没有上述规则，它是bash shell打开的时候载入的。<br>同样，如果你的shell是zsh，则会在zsh shell打开的时候读取.zshrc。  </p><a id="more"></a>
+
+<ol>
+<li><strong>/etc/profile</strong>：系统级配置文件，也是全局的配置文件，不管是哪个用户，登录时都会读取该文件。<br>此文件为系统的每个用户设置环境信息,当用户第一次登录时,该文件被执行。（不建议修改这个文件）<br>在mac下，有个<strong>path_helper</strong>的工具，这个工具会读取<strong>/etc/paths</strong>里面的路径和<strong>/etc/paths.d</strong>目录下的文件里面的路径，然后加载在环境变量$PTAH，可以选择把自己下载的软件的运行路径放在该文件夹下，登陆后会自动将该路径读取到环境变量中。 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> System-wide .profile <span class="keyword">for</span> sh(1)</span></span><br><span class="line">if [ -x /usr/libexec/path_helper ]; then</span><br><span class="line">	eval `/usr/libexec/path_helper -s`</span><br><span class="line">fi</span><br><span class="line">if [ "$&#123;BASH-no&#125;" != "no" ]; then</span><br><span class="line">	[ -r /etc/bashrc ] &amp;&amp; . /etc/bashrc</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+在linux下，有个/etc/profile.d的文件夹，你可以在该文件夹下写个添加环境变量的脚本，然后/etc/profile会在这个文件夹下遍历里面的脚本，然后把你脚本中的配置添加到环境变量中，这样比直接加到/etc/profile里要简便干净很多。</li>
+<li><strong>/etc/paths</strong>：系统级配置文件，该文件里面一行一个路径，在系统启动时被path_helper工具读取然后配置到环境变量中，而且这些路径会被配置在<code>$PATH</code>的开头，意味着先搜索这些路径。详细可见这篇<a href="https://unix.stackexchange.com/questions/356688/what-is-the-difference-between-echo-path-and-etc-paths" target="_blank" rel="noopener">回答</a>。</li>
+<li><strong>/etc/bashrc</strong>：系统级配置文件，所有用户打开一个bash shell时都会读取该文件，相对的，用户目录下的<code>~/.bashrc</code>则是用户级的配置文件。</li>
+<li><strong>~/.bash_profile</strong>：每个用户都可使用该文件输入专用于自己使用的shell信息,当用户登录时,该文件仅仅执行一次!默认情况下,他设置一些环境变量,执行用户的.bashrc文件.<br>另外，~/.bash_profile是交互式、login方式进入bash运行的。~/.bashrc 是交互式、non-login方式进入bash运行的；通常二者设置大致相同，所以通常前者会调用后者。</li>
+<li><strong>～/.zshrc</strong>：如果你的shell是zsh，则在打开zsh时就会读取该文件，并且将该文件中export的环境变量添加到<code>$PATH</code>中。</li>
+</ol>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ol>
+<li><strong>/etc/profile</strong><br>登录shell读取，系统所有，仅执行一次。</li>
+<li><strong>~/.bash_profile</strong><br>登录shell读取，个人所有，仅执行一次，该文件会读取~/.bashrc。<br>可以用<code>source ~/.bash_profile</code>来使配置文件生效。</li>
+<li><strong>/ect/bashrc</strong><br>Ubuntu没有此文件，与之对应的是/ect/bash.bashrc,全局（公有）的bash执行时，不管是何种方式，都会读取此文件。</li>
+<li><strong>~/.bashrc</strong><br>非登录shell读取(每打开一个终端都会读取)，个人所有。</li>
+</ol>
+<hr>
+<h1 id="存放二进制文件的目录"><a href="#存放二进制文件的目录" class="headerlink" title="存放二进制文件的目录"></a>存放二进制文件的目录</h1><blockquote>
+<p>/: this is root directory<br>/bin: commands in this dir are all system installed user commands<br>/sbin: commands in this dir are all system installed super user commands<br>/usr/bin: user commands for applications<br>/usr/sbin: super user commands for applications<br>/usr/local/bin: application user commands<br>/usr/local/sbin: application super user commands</p>
+</blockquote>
+<ol>
+<li><strong>/bin</strong>：存放系统的一些命令。bin为binary的简写，主要放置一些系统的必备执行档例如：cat、cp、kill、ls、mkdir、rm等。</li>
+<li><strong>/sbin</strong>：一般是指超级用户命令。主要放置一些系统管理的必备程式例如：shutdown、ifconfig等。</li>
+<li><strong>/usr/bin</strong>：系统预装的可执行程序（会随着系统升级而改变）加上后期自己安装的一些软件运行脚本和可运行程序等，例如：c++、g++、gcc、chdrv、diff、dig、du、eject、elm、free、gnome*、 gzip、curl等。</li>
+<li><strong>/usr/sbin</strong>：放置一些用户安装的系统管理的必备程式例如：chown、chroot、tcpdump等。</li>
+<li><strong>/usr/local/bin</strong>：用户放置自己的可执行程序的地方，推荐放在这里，不会被系统升级而覆盖同名文件。  </li>
+</ol>
+<h4 id="usr-bin和-usr-sbin与-sbin和-bin目录的区别在于"><a href="#usr-bin和-usr-sbin与-sbin和-bin目录的区别在于" class="headerlink" title="/usr/bin和/usr/sbin与/sbin和/bin目录的区别在于"></a>/usr/bin和/usr/sbin与/sbin和/bin目录的区别在于</h4><ol>
+<li>/bin和/sbin目录是在系统启动后挂载到根文件系统中的，所以/sbin和/bin目录必须和根文件系统在同一分区。</li>
+<li>usr/bin和/usr/sbin可以和根文件系统不在一个分区。  </li>
+</ol>
+<h3 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h3><ol>
+<li>如果是用户和管理员必备的二进制文件，就会放在/bin；</li>
+<li>如果是系统管理员必备，但是一般用户根本不会用到的二进制文件，就会放在 /sbin；</li>
+<li>如果不是用户必备的二进制文件，多半会放在/usr/bin；</li>
+<li>如果不是系统管理员必备的工具，如网络管理命令，多半会放在/usr/sbin。</li>
+</ol>
+<hr>
+<h1 id="export"><a href="#export" class="headerlink" title="export"></a>export</h1><p>export用于声明一个环境变量</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">export variable=value</span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:&lt;PATH 1&gt;:&lt;PATH 2&gt;:&lt;PATH 3&gt;:------:&lt;PATH N&gt;</span></span><br></pre></td></tr></table></figure>
+<p>如果是在系统级的配置文件中export，如/etc/profile中export一个变量，那么这个变量在配置文件生效后永久起作用。<br>如果在用户级~/.bashrc文件中export，则每次启动shell都会去读这个文件，所以每次打开shell也是可以取到这个值的。<br>如果在终端的某一次运行中，手动export一个变量，则只在这次shell的使用中，才能访问这个变量，或者在该shell启动的其他程序中，也是可以访问这个变量的，因为它们是这个shell的子进程。<br>linux的桌面程序，是不读取个人目录下的~/.bashrc等配置文件的，因此这些export的变量对用户桌面程序是没有意义的。</p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>unix</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo搭建GithubPages上手过程</title>
     <url>/2019/11/17/hexo%E6%90%AD%E5%BB%BAGithubPages%E4%B8%8A%E6%89%8B%E8%BF%87%E7%A8%8B/</url>
     <content><![CDATA[<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><p><a href="#为什么使用hexo">为什么使用hexo</a><br><a href="#如何使用hexo搭建Github-Pages">如何使用hexo搭建Github Pages</a><br><a href="#hexo的一些命令">hexo的一些命令</a><br><a href="#插件">插件</a><br><a href="#碰到的问题">碰到的问题</a></p><hr><h1 id="为什么使用hexo"><a href="#为什么使用hexo" class="headerlink" title="为什么使用hexo"></a>为什么使用hexo</h1><ol>
@@ -40,7 +94,7 @@
 </ol>
 ]]></content>
       <categories>
-        <category>踩坑|配置</category>
+        <category>踩坑</category>
       </categories>
       <tags>
         <tag>hexo</tag>
