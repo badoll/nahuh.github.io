@@ -4,7 +4,7 @@
     <title>MAC和LINUX下环境变量的相关文件和配置</title>
     <url>/2019/11/19/MAC%E5%92%8CLINUX%E4%B8%8B%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E7%9A%84%E7%9B%B8%E5%85%B3%E6%96%87%E4%BB%B6%E5%92%8C%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<blockquote>
-<p>之前一直没怎么搞清楚环境变量的文件的配置，现在整理了一下网上查阅到的资料和自己的理解。  </p>
+<p>之前一直没怎么搞清楚环境变量的文件的配置，现在整理了一下网上查阅到的资料和自己的理解。</p>
 </blockquote><h1 id="环境变量的配置文件"><a href="#环境变量的配置文件" class="headerlink" title="环境变量的配置文件"></a>环境变量的配置文件</h1><p>先说一下这几个配置环境变量的文件吧，读取的顺序依次是：<br>/etc/profile<br>/etc/paths<br>~/.bash_profile<br>~/.bash_login<br>~/.profile<br>~/.bashrc<br>/etc/profile和/etc/paths是系统级别的，系统启动就会加载，后面几个是当前用户级的环境变量，按照从前往后的顺序读取。<br>如果~/.bash_profile文件存在，则后面的几个文件就会被忽略不读了，如果/.bash_profile文件不存在，才会以此类推读取后面的文件。~/.bashrc没有上述规则，它是bash shell打开的时候载入的。<br>同样，如果你的shell是zsh，则会在zsh shell打开的时候读取.zshrc。  </p><a id="more"></a>
 
 <ol>
@@ -106,9 +106,9 @@
     <content><![CDATA[<hr><blockquote>
 <p>更新于 2019.11.19</p>
 </blockquote><p>由于今天写markdown发现排版有点问题，特此记录一下。</p><ul>
-<li>markdown的换行需要在行的结尾多打两个空格，或者在行与行之间多加一行空格。<br>注意，在两个不同的有序列表之间，不能用行尾俩个空格代表分隔两个列表，必须要多出一行空行，不然下面的列表的数字会接着上面那个列表。</li>
-<li>在有序列表中加入代码块时，需要在代码每一行加一个TAB，不然会被当成列表外的代码块，会将列表分隔开。</li>
-<li>一些特殊符号例如<code>~</code>等，如果直接打出来不加转义符号<code>\\</code>的话，那一句话会被画上删除线。<br>另外，在一些markdown编辑器下，一些错误的语法可能不会被发现，我在typora上写完排版是没问题的，放在其他地方就会出问题，可以使用网上的一些编辑器测试一下自己的markdown显示有没有问题，Chrome上也有这种markdown编辑器的插件，可以下来试一试。</li>
+<li>markdown的换行需要在行的结尾多打两个空格，或者在行与行之间多加一行空格。<br>注意，在两个不同的有序列表之间，不能用行尾俩个空格代表分隔两个列表，必须要多出一行空行，不然下面的列表的数字会接着上面那个列表。<br>markdown中像列表这种没有明确开头结尾标志的区块结构，必须用空行来分隔开，不然很容易排版出问题。</li>
+<li>在有序列表中加入代码块时，需要在代码每一行加一个TAB，不然会被当成列表外的代码块，会将列表分隔开。<br>列表中的换行也最好加上一个TAB。</li>
+<li>特殊符号想要直接打出来需要加转义字符，例如<code>~</code>如果直接打出来不加转义符号<code>\</code> 的话，那一句话会被画上删除线。<br>另外，在一些markdown编辑器下，一些错误的语法可能不会被发现，我在typora上写完排版是没问题的，放在其他地方就会出问题，可以使用网上的一些编辑器测试一下自己的markdown显示有没有问题，Chrome上也有这种markdown编辑器的插件，可以下来试一试。</li>
 </ul><a id="more"></a>
 
 
@@ -137,7 +137,7 @@
 <li><a href="https://ecotrust-canada.github.io/markdown-toc/" target="_blank" rel="noopener">网页生成</a></li>
 <li>github上的一个<a href="https://github.com/ekalinin/github-markdown-toc" target="_blank" rel="noopener">脚本</a>，里面有详细的说明</li>
 </ol>
-<p>还有一些详细的技巧可以参考<a href="https://sspai.com/post/37273" target="_blank" rel="noopener">文章</a>。</p>
+<p>还有一些详细的技巧可以参考以下几篇文章。<br><a href="https://sspai.com/post/37273" target="_blank" rel="noopener">文章1</a><br><a href="https://segmentfault.com/markdown" target="_blank" rel="noopener">文章2</a><br><a href="http://xianbai.me/learn-md/article/syntax/paragraphs-and-line-breaks.html" target="_blank" rel="noopener">基础教程</a>  </p>
 ]]></content>
       <categories>
         <category>笔记</category>

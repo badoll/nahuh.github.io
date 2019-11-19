@@ -46,15 +46,15 @@
   };
 </script>
 
-  <meta name="description" content="之前一直没怎么搞清楚环境变量的文件的配置，现在整理了一下网上查阅到的资料和自己的理解。   环境变量的配置文件先说一下这几个配置环境变量的文件吧，读取的顺序依次是：&#x2F;etc&#x2F;profile&#x2F;etc&#x2F;paths~&#x2F;.bash_profile~&#x2F;.bash_login~&#x2F;.profile~&#x2F;.bashrc&#x2F;etc&#x2F;profile和&#x2F;etc&#x2F;paths是系统级别的，系统启动就会加载，后面几个是当前用户">
+  <meta name="description" content="之前一直没怎么搞清楚环境变量的文件的配置，现在整理了一下网上查阅到的资料和自己的理解。 环境变量的配置文件先说一下这几个配置环境变量的文件吧，读取的顺序依次是：&#x2F;etc&#x2F;profile&#x2F;etc&#x2F;paths~&#x2F;.bash_profile~&#x2F;.bash_login~&#x2F;.profile~&#x2F;.bashrc&#x2F;etc&#x2F;profile和&#x2F;etc&#x2F;paths是系统级别的，系统启动就会加载，后面几个是当前用户级的">
 <meta name="keywords" content="unix">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MAC和LINUX下环境变量的相关文件和配置">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;19&#x2F;MAC%E5%92%8CLINUX%E4%B8%8B%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E7%9A%84%E7%9B%B8%E5%85%B3%E6%96%87%E4%BB%B6%E5%92%8C%E9%85%8D%E7%BD%AE&#x2F;index.html">
 <meta property="og:site_name" content="Nahuh&#39;s Blog">
-<meta property="og:description" content="之前一直没怎么搞清楚环境变量的文件的配置，现在整理了一下网上查阅到的资料和自己的理解。   环境变量的配置文件先说一下这几个配置环境变量的文件吧，读取的顺序依次是：&#x2F;etc&#x2F;profile&#x2F;etc&#x2F;paths~&#x2F;.bash_profile~&#x2F;.bash_login~&#x2F;.profile~&#x2F;.bashrc&#x2F;etc&#x2F;profile和&#x2F;etc&#x2F;paths是系统级别的，系统启动就会加载，后面几个是当前用户">
+<meta property="og:description" content="之前一直没怎么搞清楚环境变量的文件的配置，现在整理了一下网上查阅到的资料和自己的理解。 环境变量的配置文件先说一下这几个配置环境变量的文件吧，读取的顺序依次是：&#x2F;etc&#x2F;profile&#x2F;etc&#x2F;paths~&#x2F;.bash_profile~&#x2F;.bash_login~&#x2F;.profile~&#x2F;.bashrc&#x2F;etc&#x2F;profile和&#x2F;etc&#x2F;paths是系统级别的，系统启动就会加载，后面几个是当前用户级的">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-19T11:06:07.523Z">
+<meta property="og:updated_time" content="2019-11-19T14:25:48.681Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://yoursite.com/2019/11/19/MAC%E5%92%8CLINUX%E4%B8%8B%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E7%9A%84%E7%9B%B8%E5%85%B3%E6%96%87%E4%BB%B6%E5%92%8C%E9%85%8D%E7%BD%AE/">
@@ -230,7 +230,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2019-11-19 19:05:00 / 修改时间：19:06:07" itemprop="dateCreated datePublished" datetime="2019-11-19T19:05:00+08:00">2019-11-19</time>
+              <time title="创建时间：2019-11-19 19:05:00 / 修改时间：22:25:48" itemprop="dateCreated datePublished" datetime="2019-11-19T19:05:00+08:00">2019-11-19</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -256,7 +256,7 @@
 
       
         <blockquote>
-<p>之前一直没怎么搞清楚环境变量的文件的配置，现在整理了一下网上查阅到的资料和自己的理解。  </p>
+<p>之前一直没怎么搞清楚环境变量的文件的配置，现在整理了一下网上查阅到的资料和自己的理解。</p>
 </blockquote><h1 id="环境变量的配置文件"><a href="#环境变量的配置文件" class="headerlink" title="环境变量的配置文件"></a>环境变量的配置文件</h1><p>先说一下这几个配置环境变量的文件吧，读取的顺序依次是：<br>/etc/profile<br>/etc/paths<br>~/.bash_profile<br>~/.bash_login<br>~/.profile<br>~/.bashrc<br>/etc/profile和/etc/paths是系统级别的，系统启动就会加载，后面几个是当前用户级的环境变量，按照从前往后的顺序读取。<br>如果~/.bash_profile文件存在，则后面的几个文件就会被忽略不读了，如果/.bash_profile文件不存在，才会以此类推读取后面的文件。~/.bashrc没有上述规则，它是bash shell打开的时候载入的。<br>同样，如果你的shell是zsh，则会在zsh shell打开的时候读取.zshrc。  </p><a id="more"></a>
 
 <ol>
