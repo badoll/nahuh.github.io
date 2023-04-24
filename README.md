@@ -1,0 +1,1 @@
+Powered by [Hugo](https://github.com/gohugoio/hugo)

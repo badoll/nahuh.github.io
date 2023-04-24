@@ -1,4 +1,12 @@
-baseURL: http://example.org/
+baseURL: https://badoll.github.io/
 languageCode: en-us
-title: My New Hugo Site
+title: Nahuh's Blog
 theme: PaperMod
+params:
+  homeInfoParams:
+    Title: Hi there👋🏻
+    Content: Exploring the Unknown Unknown
+
+  socialIcons:
+    - name: "github"
+      url: "https://github.com/badoll"
