@@ -10,6 +10,11 @@ tags:
 
 ## post meta
 themes文件夹下面的layouts/partials找到post_meta.html
+```
+layouts/partials/*<PARTIALNAME>.html
+themes/<THEME>/layouts/partials/*<PARTIALNAME>.html
+```
+copy一份到`layouts/partials/`
 ```xml
 {{ $date := .Date.Format "02.01.2006" }}
 {{ $lastmod := .Lastmod.Format "02.01.2006" }}
