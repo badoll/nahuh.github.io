@@ -2,11 +2,27 @@ baseURL: https://badoll.github.io/
 languageCode: en-us
 title: Nahuh's Blog
 theme: PaperMod
+enableEmoji: true
+enableGitInfo: true
+menu:
+  main:
+    - name: "Archive"
+      weight: 10
+      identifier: "archives"
+      url: "/archives/"
+    - name: "Tag"
+      weight: 20
+      identifier: "tags"
+      url: "/tags/"
+
 params:
   homeInfoParams:
-    Title: Hi there👋🏻
-    Content: Exploring the Unknown Unknown
-
+    Title: Hi there👋
+    Content: The dots will somehow connect in the future
   socialIcons:
     - name: "github"
       url: "https://github.com/badoll"
+
+taxonomies:
+  category: categories
+  tag: tags

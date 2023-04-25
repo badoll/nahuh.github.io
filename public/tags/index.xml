@@ -5,6 +5,16 @@
     <link>https://badoll.github.io/tags/</link>
     <description>Recent content in Tags on Nahuh&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://badoll.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Mon, 24 Apr 2023 17:34:53 +0800</lastBuildDate><atom:link href="https://badoll.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>test</title>
+      <link>https://badoll.github.io/tags/test/</link>
+      <pubDate>Mon, 24 Apr 2023 17:34:53 +0800</pubDate>
+      
+      <guid>https://badoll.github.io/tags/test/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
