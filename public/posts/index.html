@@ -147,13 +147,13 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>test 修改post meta themes文件夹下面的layouts/partials找到post_meta.html
-{{ $date := .Date.Format &#34;02.01.2006&#34; }} {{ $lastmod := .Lastmod.Format &#34;02.01.2006&#34; }} {{- if ne $lastmod $date -}} {{- $scratch.Add &#34;meta&#34; (slice (printf &#34;&lt;span title=&#39;%s&#39;&gt;(updated %s)&lt;/span&gt;&#34; (.Lastmod) (.Lastmod | time.Format (default &#34;January 2, 2006&#34; site.Params.DateFormat)))) }} {{- end }} page bundle 用于单page的资源管理，属于该页的资源都放在这个文件夹 branch bundle 适用于页面下有嵌套子页 https://blog.darkthread.net/blog/hugo-figures/</p>
+    <p>页面管理 page layout post meta themes文件夹下面的layouts/partials找到post_meta.html
+{{ $date := .Date.Format &#34;02.01.2006&#34; }} {{ $lastmod := .Lastmod.Format &#34;02.01.2006&#34; }} {{- if ne $lastmod $date -}} {{- $scratch.Add &#34;meta&#34; (slice (printf &#34;&lt;span title=&#39;%s&#39;&gt;(updated %s)&lt;/span&gt;&#34; (.Lastmod) (.Lastmod | time.Format (default &#34;January 2, 2006&#34; site.Params.DateFormat)))) }} {{- end }} 资源管理 page bundle 用于单page的资源管理，属于该页的资源都放在这个文件夹 branch bundle 适用于页面下有嵌套子页 https://blog.darkthread.net/blog/hugo-figures/</p>
   </div>
   <footer class="entry-footer">
 
 
-<span title='2023-04-24 17:34:53 +0800 CST'>April 24, 2023</span></footer>
+<span title='2023-04-24 17:34:53 +0800 CST'>April 24, 2023</span>&nbsp;·&nbsp;<span title='2023-04-25 20:14:30 +0800 CST'>(updated April 25, 2023)</span></footer>
   <a class="entry-link" aria-label="post link to Hugo 搭建" href="https://badoll.github.io/posts/hugo-blog-%E6%90%AD%E5%BB%BA/"></a>
 </article>
     </main>

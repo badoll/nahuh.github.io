@@ -7,8 +7,8 @@
 <meta name="robots" content="index, follow">
 <title>Hugo 搭建 | Nahuh&#39;s Blog</title>
 <meta name="keywords" content="hugo">
-<meta name="description" content="test 修改post meta themes文件夹下面的layouts/partials找到post_meta.html
-{{ $date := .Date.Format &#34;02.01.2006&#34; }} {{ $lastmod := .Lastmod.Format &#34;02.01.2006&#34; }} {{- if ne $lastmod $date -}} {{- $scratch.Add &#34;meta&#34; (slice (printf &#34;&lt;span title=&#39;%s&#39;&gt;(updated %s)&lt;/span&gt;&#34; (.Lastmod) (.Lastmod | time.Format (default &#34;January 2, 2006&#34; site.Params.DateFormat)))) }} {{- end }} page bundle 用于单page的资源管理，属于该页的资源都放在这个文件夹 branch bundle 适用于页面下有嵌套子页 https://blog.darkthread.net/blog/hugo-figures/">
+<meta name="description" content="页面管理 page layout post meta themes文件夹下面的layouts/partials找到post_meta.html
+{{ $date := .Date.Format &#34;02.01.2006&#34; }} {{ $lastmod := .Lastmod.Format &#34;02.01.2006&#34; }} {{- if ne $lastmod $date -}} {{- $scratch.Add &#34;meta&#34; (slice (printf &#34;&lt;span title=&#39;%s&#39;&gt;(updated %s)&lt;/span&gt;&#34; (.Lastmod) (.Lastmod | time.Format (default &#34;January 2, 2006&#34; site.Params.DateFormat)))) }} {{- end }} 资源管理 page bundle 用于单page的资源管理，属于该页的资源都放在这个文件夹 branch bundle 适用于页面下有嵌套子页 https://blog.darkthread.net/blog/hugo-figures/">
 <meta name="author" content="">
 <link rel="canonical" href="https://badoll.github.io/posts/hugo-blog-%E6%90%AD%E5%BB%BA/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.3613efbd0b1772781e8f49935e973cae632a7f61471c05b17be155505ccf87b5.css" integrity="sha256-NhPvvQsXcngej0mTXpc8rmMqf2FHHAWxe&#43;FVUFzPh7U=" rel="preload stylesheet" as="style">
@@ -58,17 +58,17 @@
 
     </style>
 </noscript><meta property="og:title" content="Hugo 搭建" />
-<meta property="og:description" content="test 修改post meta themes文件夹下面的layouts/partials找到post_meta.html
-{{ $date := .Date.Format &#34;02.01.2006&#34; }} {{ $lastmod := .Lastmod.Format &#34;02.01.2006&#34; }} {{- if ne $lastmod $date -}} {{- $scratch.Add &#34;meta&#34; (slice (printf &#34;&lt;span title=&#39;%s&#39;&gt;(updated %s)&lt;/span&gt;&#34; (.Lastmod) (.Lastmod | time.Format (default &#34;January 2, 2006&#34; site.Params.DateFormat)))) }} {{- end }} page bundle 用于单page的资源管理，属于该页的资源都放在这个文件夹 branch bundle 适用于页面下有嵌套子页 https://blog.darkthread.net/blog/hugo-figures/" />
+<meta property="og:description" content="页面管理 page layout post meta themes文件夹下面的layouts/partials找到post_meta.html
+{{ $date := .Date.Format &#34;02.01.2006&#34; }} {{ $lastmod := .Lastmod.Format &#34;02.01.2006&#34; }} {{- if ne $lastmod $date -}} {{- $scratch.Add &#34;meta&#34; (slice (printf &#34;&lt;span title=&#39;%s&#39;&gt;(updated %s)&lt;/span&gt;&#34; (.Lastmod) (.Lastmod | time.Format (default &#34;January 2, 2006&#34; site.Params.DateFormat)))) }} {{- end }} 资源管理 page bundle 用于单page的资源管理，属于该页的资源都放在这个文件夹 branch bundle 适用于页面下有嵌套子页 https://blog.darkthread.net/blog/hugo-figures/" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://badoll.github.io/posts/hugo-blog-%E6%90%AD%E5%BB%BA/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-04-24T17:34:53+08:00" />
-<meta property="article:modified_time" content="2023-04-24T17:34:53+08:00" />
+<meta property="article:modified_time" content="2023-04-25T20:14:30+08:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Hugo 搭建"/>
-<meta name="twitter:description" content="test 修改post meta themes文件夹下面的layouts/partials找到post_meta.html
-{{ $date := .Date.Format &#34;02.01.2006&#34; }} {{ $lastmod := .Lastmod.Format &#34;02.01.2006&#34; }} {{- if ne $lastmod $date -}} {{- $scratch.Add &#34;meta&#34; (slice (printf &#34;&lt;span title=&#39;%s&#39;&gt;(updated %s)&lt;/span&gt;&#34; (.Lastmod) (.Lastmod | time.Format (default &#34;January 2, 2006&#34; site.Params.DateFormat)))) }} {{- end }} page bundle 用于单page的资源管理，属于该页的资源都放在这个文件夹 branch bundle 适用于页面下有嵌套子页 https://blog.darkthread.net/blog/hugo-figures/"/>
+<meta name="twitter:description" content="页面管理 page layout post meta themes文件夹下面的layouts/partials找到post_meta.html
+{{ $date := .Date.Format &#34;02.01.2006&#34; }} {{ $lastmod := .Lastmod.Format &#34;02.01.2006&#34; }} {{- if ne $lastmod $date -}} {{- $scratch.Add &#34;meta&#34; (slice (printf &#34;&lt;span title=&#39;%s&#39;&gt;(updated %s)&lt;/span&gt;&#34; (.Lastmod) (.Lastmod | time.Format (default &#34;January 2, 2006&#34; site.Params.DateFormat)))) }} {{- end }} 资源管理 page bundle 用于单page的资源管理，属于该页的资源都放在这个文件夹 branch bundle 适用于页面下有嵌套子页 https://blog.darkthread.net/blog/hugo-figures/"/>
 
 
 <script type="application/ld+json">
@@ -97,15 +97,15 @@
   "@type": "BlogPosting",
   "headline": "Hugo 搭建",
   "name": "Hugo 搭建",
-  "description": "test 修改post meta themes文件夹下面的layouts/partials找到post_meta.html\n{{ $date := .Date.Format \u0026#34;02.01.2006\u0026#34; }} {{ $lastmod := .Lastmod.Format \u0026#34;02.01.2006\u0026#34; }} {{- if ne $lastmod $date -}} {{- $scratch.Add \u0026#34;meta\u0026#34; (slice (printf \u0026#34;\u0026lt;span title=\u0026#39;%s\u0026#39;\u0026gt;(updated %s)\u0026lt;/span\u0026gt;\u0026#34; (.Lastmod) (.Lastmod | time.Format (default \u0026#34;January 2, 2006\u0026#34; site.Params.DateFormat)))) }} {{- end }} page bundle 用于单page的资源管理，属于该页的资源都放在这个文件夹 branch bundle 适用于页面下有嵌套子页 https://blog.darkthread.net/blog/hugo-figures/",
+  "description": "页面管理 page layout post meta themes文件夹下面的layouts/partials找到post_meta.html\n{{ $date := .Date.Format \u0026#34;02.01.2006\u0026#34; }} {{ $lastmod := .Lastmod.Format \u0026#34;02.01.2006\u0026#34; }} {{- if ne $lastmod $date -}} {{- $scratch.Add \u0026#34;meta\u0026#34; (slice (printf \u0026#34;\u0026lt;span title=\u0026#39;%s\u0026#39;\u0026gt;(updated %s)\u0026lt;/span\u0026gt;\u0026#34; (.Lastmod) (.Lastmod | time.Format (default \u0026#34;January 2, 2006\u0026#34; site.Params.DateFormat)))) }} {{- end }} 资源管理 page bundle 用于单page的资源管理，属于该页的资源都放在这个文件夹 branch bundle 适用于页面下有嵌套子页 https://blog.darkthread.net/blog/hugo-figures/",
   "keywords": [
     "hugo"
   ],
-  "articleBody": "test 修改post meta themes文件夹下面的layouts/partials找到post_meta.html\n{{ $date := .Date.Format \"02.01.2006\" }} {{ $lastmod := .Lastmod.Format \"02.01.2006\" }} {{- if ne $lastmod $date -}} {{- $scratch.Add \"meta\" (slice (printf \"",
-  "wordCount" : "50",
+  "articleBody": "页面管理 page layout post meta themes文件夹下面的layouts/partials找到post_meta.html\n{{ $date := .Date.Format \"02.01.2006\" }} {{ $lastmod := .Lastmod.Format \"02.01.2006\" }} {{- if ne $lastmod $date -}} {{- $scratch.Add \"meta\" (slice (printf \"",
+  "wordCount" : "53",
   "inLanguage": "en",
   "datePublished": "2023-04-24T17:34:53+08:00",
-  "dateModified": "2023-04-24T17:34:53+08:00",
+  "dateModified": "2023-04-25T20:14:30+08:00",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://badoll.github.io/posts/hugo-blog-%E6%90%AD%E5%BB%BA/"
@@ -186,19 +186,21 @@
     <div class="post-meta">
 
 
-<span title='2023-04-24 17:34:53 +0800 CST'>April 24, 2023</span>
+<span title='2023-04-24 17:34:53 +0800 CST'>April 24, 2023</span>&nbsp;·&nbsp;<span title='2023-04-25 20:14:30 +0800 CST'>(updated April 25, 2023)</span>
 
 </div>
   </header> 
-  <div class="post-content"><h1 id="test">test<a hidden class="anchor" aria-hidden="true" href="#test">#</a></h1>
-<p>修改post meta
-themes文件夹下面的layouts/partials找到post_meta.html</p>
+  <div class="post-content"><h1 id="页面管理">页面管理<a hidden class="anchor" aria-hidden="true" href="#页面管理">#</a></h1>
+<h2 id="page-layout">page layout<a hidden class="anchor" aria-hidden="true" href="#page-layout">#</a></h2>
+<h2 id="post-meta">post meta<a hidden class="anchor" aria-hidden="true" href="#post-meta">#</a></h2>
+<p>themes文件夹下面的layouts/partials找到post_meta.html</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>{{ $date := .Date.Format &#34;02.01.2006&#34; }}
 </span></span><span style="display:flex;"><span>{{ $lastmod := .Lastmod.Format &#34;02.01.2006&#34; }}
 </span></span><span style="display:flex;"><span>{{- if ne $lastmod $date -}}
 </span></span><span style="display:flex;"><span>{{- $scratch.Add &#34;meta&#34; (slice (printf &#34;<span style="color:#f92672">&lt;span</span> <span style="color:#a6e22e">title=</span><span style="color:#e6db74">&#39;%s&#39;</span><span style="color:#f92672">&gt;</span>(updated %s)<span style="color:#f92672">&lt;/span&gt;</span>&#34; (.Lastmod) (.Lastmod | time.Format (default &#34;January 2, 2006&#34; site.Params.DateFormat)))) }}
 </span></span><span style="display:flex;"><span>{{- end }}
-</span></span></code></pre></div><p>page bundle 用于单page的资源管理，属于该页的资源都放在这个文件夹
+</span></span></code></pre></div><h1 id="资源管理">资源管理<a hidden class="anchor" aria-hidden="true" href="#资源管理">#</a></h1>
+<p>page bundle 用于单page的资源管理，属于该页的资源都放在这个文件夹
 branch bundle 适用于页面下有嵌套子页
 <a href="https://blog.darkthread.net/blog/hugo-figures/">https://blog.darkthread.net/blog/hugo-figures/</a></p>
 

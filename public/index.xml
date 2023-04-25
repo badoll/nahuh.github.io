@@ -13,8 +13,8 @@
       <pubDate>Mon, 24 Apr 2023 17:34:53 +0800</pubDate>
       
       <guid>https://badoll.github.io/posts/hugo-blog-%E6%90%AD%E5%BB%BA/</guid>
-      <description>test 修改post meta themes文件夹下面的layouts/partials找到post_meta.html
-{{ $date := .Date.Format &amp;#34;02.01.2006&amp;#34; }} {{ $lastmod := .Lastmod.Format &amp;#34;02.01.2006&amp;#34; }} {{- if ne $lastmod $date -}} {{- $scratch.Add &amp;#34;meta&amp;#34; (slice (printf &amp;#34;&amp;lt;span title=&amp;#39;%s&amp;#39;&amp;gt;(updated %s)&amp;lt;/span&amp;gt;&amp;#34; (.Lastmod) (.Lastmod | time.Format (default &amp;#34;January 2, 2006&amp;#34; site.Params.DateFormat)))) }} {{- end }} page bundle 用于单page的资源管理，属于该页的资源都放在这个文件夹 branch bundle 适用于页面下有嵌套子页 https://blog.darkthread.net/blog/hugo-figures/</description>
+      <description>页面管理 page layout post meta themes文件夹下面的layouts/partials找到post_meta.html
+{{ $date := .Date.Format &amp;#34;02.01.2006&amp;#34; }} {{ $lastmod := .Lastmod.Format &amp;#34;02.01.2006&amp;#34; }} {{- if ne $lastmod $date -}} {{- $scratch.Add &amp;#34;meta&amp;#34; (slice (printf &amp;#34;&amp;lt;span title=&amp;#39;%s&amp;#39;&amp;gt;(updated %s)&amp;lt;/span&amp;gt;&amp;#34; (.Lastmod) (.Lastmod | time.Format (default &amp;#34;January 2, 2006&amp;#34; site.Params.DateFormat)))) }} {{- end }} 资源管理 page bundle 用于单page的资源管理，属于该页的资源都放在这个文件夹 branch bundle 适用于页面下有嵌套子页 https://blog.darkthread.net/blog/hugo-figures/</description>
     </item>
     
     
