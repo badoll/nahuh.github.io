@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Nahuh&#39;s Blog</title>
-    <link>https://badoll.github.io/</link>
-    <description>Recent content on Nahuh&#39;s Blog</description>
+    <title>hugo on Nahuh&#39;s Blog</title>
+    <link>https://badoll.github.io/tags/hugo/</link>
+    <description>Recent content in hugo on Nahuh&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 24 Apr 2023 17:34:53 +0800</lastBuildDate><atom:link href="https://badoll.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 24 Apr 2023 17:34:53 +0800</lastBuildDate><atom:link href="https://badoll.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo 搭建</title>
       <link>https://badoll.github.io/posts/hugo-blog-%E6%90%AD%E5%BB%BA/</link>
@@ -16,7 +16,6 @@
       <description>test 修改post meta themes文件夹下面的layouts/partials找到post_meta.html
 {{ $date := .Date.Format &amp;#34;02.01.2006&amp;#34; }} {{ $lastmod := .Lastmod.Format &amp;#34;02.01.2006&amp;#34; }} {{- if ne $lastmod $date -}} {{- $scratch.Add &amp;#34;meta&amp;#34; (slice (printf &amp;#34;&amp;lt;span title=&amp;#39;%s&amp;#39;&amp;gt;(updated %s)&amp;lt;/span&amp;gt;&amp;#34; (.Lastmod) (.Lastmod | time.Format (default &amp;#34;January 2, 2006&amp;#34; site.Params.DateFormat)))) }} {{- end }} page bundle 用于单page的资源管理，属于该页的资源都放在这个文件夹 branch bundle 适用于页面下有嵌套子页 https://blog.darkthread.net/blog/hugo-figures/</description>
     </item>
-    
     
   </channel>
 </rss>
