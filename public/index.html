@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://badoll.github.io/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.3613efbd0b1772781e8f49935e973cae632a7f61471c05b17be155505ccf87b5.css" integrity="sha256-NhPvvQsXcngej0mTXpc8rmMqf2FHHAWxe&#43;FVUFzPh7U=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.6e4288df467bc284ef4f6775c94bd0531c5cc0e56178f84f1f4028d1c93397a5.css" integrity="sha256-bkKI30Z7woTvT2d1yUvQUxxcwOVhePhPH0Ao0ckzl6U=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://badoll.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://badoll.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://badoll.github.io/favicon-32x32.png">
@@ -126,6 +126,11 @@
                 </a>
             </li>
             <li>
+                <a href="https://badoll.github.io/categories/" title="Category">
+                    <span>Category</span>
+                </a>
+            </li>
+            <li>
                 <a href="https://badoll.github.io/tags/" title="Tag">
                     <span>Tag</span>
                 </a>
@@ -158,18 +163,17 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>Hugo 搭建
+    <h2>Hugo 博客搭建
     </h2>
   </header>
   <div class="entry-content">
-    <p>页面管理 page layout post meta themes文件夹下面的layouts/partials找到post_meta.html
-{{ $date := .Date.Format &#34;02.01.2006&#34; }} {{ $lastmod := .Lastmod.Format &#34;02.01.2006&#34; }} {{- if ne $lastmod $date -}} {{- $scratch.Add &#34;meta&#34; (slice (printf &#34;&lt;span title=&#39;%s&#39;&gt;(updated %s)&lt;/span&gt;&#34; (.Lastmod) (.Lastmod | time.Format (default &#34;January 2, 2006&#34; site.Params.DateFormat)))) }} {{- end }} 资源管理 page bundle 用于单page的资源管理，属于该页的资源都放在这个文件夹 branch bundle 适用于页面下有嵌套子页 https://blog.darkthread.net/blog/hugo-figures/</p>
+    <p>hugo 目录结构 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 . ├── README.md ├── archetypes │ └── default.md ├── assets ├── config.yaml ├── content │ ├── archives.md │ └── posts ├── data ├── layouts │ └── partials ├── public │ ├── 404.html │ ├── archives │ ├── assets │ ├── categories │ ├── index....</p>
   </div>
   <footer class="entry-footer">
 
 
-<span title='2023-04-24 17:34:53 +0800 CST'>April 24, 2023</span>&nbsp;·&nbsp;<span title='2023-04-25 20:14:30 +0800 CST'>(updated April 25, 2023)</span></footer>
-  <a class="entry-link" aria-label="post link to Hugo 搭建" href="https://badoll.github.io/posts/hugo-blog-%E6%90%AD%E5%BB%BA/"></a>
+<span title='2023-04-24 17:34:53 +0800 CST'>2023-04-24</span>&nbsp;·&nbsp;2 min</footer>
+  <a class="entry-link" aria-label="post link to Hugo 博客搭建" href="https://badoll.github.io/posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"></a>
 </article>
     </main>
     
