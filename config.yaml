@@ -1,6 +1,6 @@
 baseURL: https://badoll.github.io/
 languageCode: en-us
-title: Nahuh's Blog
+title: lvv3's café
 theme: PaperMod
 enableEmoji: true
 enableGitInfo: true
@@ -35,7 +35,7 @@ params:
   defaultTheme: auto  # defaultTheme: light or  dark 
   disableThemeToggle: false
   homeInfoParams:
-    Title: Hi there👋
+    Title: Hi There👋
     Content: The dots will somehow connect in the future
   socialIcons:
     - name: "github"
