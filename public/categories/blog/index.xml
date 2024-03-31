@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Blog on lvv3&#39;s café</title>
-    <link>http://localhost:1313/categories/blog/</link>
+    <link>https://badoll.github.io/categories/blog/</link>
     <description>Recent content in Blog on lvv3&#39;s café</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 24 Apr 2023 17:34:53 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 24 Apr 2023 17:34:53 +0800</lastBuildDate><atom:link href="https://badoll.github.io/categories/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo 博客搭建</title>
-      <link>http://localhost:1313/posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link>
+      <link>https://badoll.github.io/posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link>
       <pubDate>Mon, 24 Apr 2023 17:34:53 +0800</pubDate>
       
-      <guid>http://localhost:1313/posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</guid>
+      <guid>https://badoll.github.io/posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</guid>
       <description>hugo 目录结构 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 . ├── README.md ├── archetypes │ └── default.md ├── assets ├── config.yaml ├── content │ ├── archives.md │ └── posts ├── data ├── layouts │ └── partials ├── public │ ├── 404.html │ ├── archives │ ├── assets │ ├── categories │ ├── index.</description>
     </item>
     
