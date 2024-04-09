@@ -6,15 +6,14 @@
     <description>Recent content in Categories on lvv3&#39;s café</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 24 Apr 2023 17:34:53 +0800</lastBuildDate><atom:link href="https://lvv3.cafe/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 May 2023 20:38:05 +0800</lastBuildDate>
+    <atom:link href="https://lvv3.cafe/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Blog</title>
       <link>https://lvv3.cafe/categories/blog/</link>
       <pubDate>Mon, 24 Apr 2023 17:34:53 +0800</pubDate>
-      
       <guid>https://lvv3.cafe/categories/blog/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

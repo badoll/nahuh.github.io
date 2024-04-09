@@ -23,9 +23,9 @@ params:
   DateFormat: "2006-01-02"
   ShowToc: true # 显示目录
   TocOpen: true # 自动展开目录
-  #ShowLastMod: true #显示文章更新时间
+  ShowLastMod: true #显示文章更新时间
   ShowReadingTime: true
-  ShowWordCounts: true
+  ShowWordCount: false
   VisitCount: true
   displayFullLangName: true
   ShowPostNavLinks: true
